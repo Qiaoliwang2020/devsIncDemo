@@ -4,7 +4,7 @@ var dice = {
     sides: 6,
     roll: function () {
         var randomNumber = Math.floor(Math.random() * this.sides) + 1;
-        return randomNumber;
+        displayResult(randomNumber);
     }
 }
 //display dice roll result to the page
@@ -16,6 +16,5 @@ function displayResult(number) {
 var rollAction = document.getElementById('rollAction');
 
 rollAction.onclick = function () {
-   var result = dice.roll();
-   displayResult(result);
+    dice.roll();
 };
